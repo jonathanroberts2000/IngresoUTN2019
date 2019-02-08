@@ -7,9 +7,12 @@ function MostrarDescuento()
 	var importe;
     var descuento;
     var resultado;
-    importe = document.getElementById("importe").value;
-    importe = parseInt (importe);
+    importe = toFixed(2);
+    descuento = toFixed(2);
+    resultado  = toFixed(2);
+    importe = parseFloat(document.getElementById("importe").value);
     descuento = (importe*25)/100;
     resultado = importe - descuento; 
     document.getElementById("resultado").value = resultado;
+    alert("El descuento es de" + " " + descuento);
 }

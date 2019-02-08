@@ -7,8 +7,10 @@ function MostrarAumento()
     var sueldo;
     var resultado;
     var aumento;
-    sueldo = document.getElementById("sueldo").value;
-    sueldo = parseInt(sueldo);
+    sueldo = toFixed(2);
+    resultado = toFixed(2);
+    aumento = toFixed(2);
+    sueldo = parseFloat(document.getElementById("sueldo").value);
     resultado = (sueldo * 10)/100 + sueldo;
     aumento = (sueldo * 10)/100;
     document.getElementById("resultado").value = resultado;
