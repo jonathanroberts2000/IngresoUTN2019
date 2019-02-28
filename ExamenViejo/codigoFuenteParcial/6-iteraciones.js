@@ -1,17 +1,28 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-    var ventas;
-    var acumulador = 0;
-    var mayor;
-    var menor;
-    for(ventas = 0; ventas <7; ventas++){
-        acumulador = parseInt(prompt("Ingrese un importe"));
-        while(isNaN(acumulador) || acumulador <= 0){
-            acumulador = parseInt(prompt("Error! Ingrese un importe valido"));
+    var importe;
+    var maximo;
+    var minimo;
+    var diaMax;
+    var diaMin;
+    var flag = 0;
+
+    for(var i = 1; i <= 7; i++){
+        importe = parseInt(prompt("Ingrese un importe"));
+        while(importe <= 0 || isNaN(importe)){
+            importe = parseInt(prompt("Error, Reingrese un importe"));
+        }
+        if(maximo < importe || flag == 0){
+            maximo = importe;
+            diaMax = i;
+        }
+        if(minimo > importe || flag == 0){
+            minimo = importe;
+            diaMin = i;
+            flag = 1;
         }
     }
-    
-    alert("El mayor importe fue " + mayor + " y el menor importe fue " + menor);
+    alert("El mayor importe es $ " + maximo + " del dia " + diaMax + " el menor importe es $ " + minimo + " del dia " + diaMin);
 }
 

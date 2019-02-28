@@ -2,7 +2,7 @@
 function Mostrar()
 {
 	var mes;
-    mes = prompt("Ingrese un mes del año");
+    mes = prompt("Ingrese un mes del año").toLowerCase();
     switch (mes){
         case "enero":
         case "febrero":
