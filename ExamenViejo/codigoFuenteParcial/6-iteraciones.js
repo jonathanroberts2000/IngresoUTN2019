@@ -23,6 +23,6 @@ function Mostrar()
             flag = 1;
         }
     }
-    alert("El mayor importe es $ " + maximo + " del dia " + diaMax + " el menor importe es $ " + minimo + " del dia " + diaMin);
+    alert("El mayor importe es $ " + maximo + " del dia " + diaMax + "\nEl menor importe es $ " + minimo + " del dia " + diaMin);
 }
 
